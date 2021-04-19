@@ -11,7 +11,6 @@ import UIKit
 class GallerySearchService {
 
     public enum Constants {
-        static let authUrl = "https://api.imgur.com/oauth2/token"
         static let serachGalleryBaseUrl = "https://api.imgur.com/3/gallery/search"
 
         static let contentTypeHeader = "Content-Type"
