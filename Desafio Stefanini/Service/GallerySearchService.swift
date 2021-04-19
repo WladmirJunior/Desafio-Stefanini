@@ -21,38 +21,6 @@ class GallerySearchService {
         static let authorizationValue = "Client-ID 0e28aa10e09ced4"
     }
 
-    public func authenticate() {
-        guard let url = URL(string: Constants.authUrl) else {
-            return
-        }
-
-        let parameters = [
-            "refresh_token": "b1d03b2a376fd4d1024b38530709c15323bfa61a",
-            "client_id": "0e28aa10e09ced4",
-            "client_secret": "b811cfa71bdeda66abc1ac16cb56d8caeb7a27d4",
-            "grant_type": "refresh_token"
-        ]
-
-        guard let jsonToData = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) else {
-            return
-        }
-
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "POST"
-        urlRequest.httpBody = jsonToData
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            guard let data = data else {
-                print(String(describing: error))
-                return
-            }
-            print(String(data: data, encoding: .utf8)!)
-        }
-
-        task.resume()
-    }
-
     public func getImages(search: String, page: Int, completion: @escaping (GalleryResponse) -> Void) {
         guard let url = URL(string: "\(Constants.serachGalleryBaseUrl)/\(page)?q=\(search)&q_size_px=small&q_type=jpg") else {
             return

@@ -66,9 +66,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         cell.display(image: nil)
+        cell.loandingIndicator.startAnimating()
+
         let link = arrayOfImages[indexPath.row]
         service.downloadImage(with: link) { image in
             DispatchQueue.main.async {
+                cell.loandingIndicator.stopAnimating()
                 cell.imageView.image = image
                 cell.imageView.contentMode = .scaleAspectFill
             }

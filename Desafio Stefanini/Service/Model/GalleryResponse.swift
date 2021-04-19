@@ -11,6 +11,12 @@ struct GalleryResponse: Decodable {
     let data: [DataResponse]
     let success: Bool
     let status: Int
+
+    enum CodingKeys: String, CodingKey {
+        case data = "data"
+        case success = "success"
+        case status = "status"
+    }
 }
 
 struct DataResponse: Decodable {
