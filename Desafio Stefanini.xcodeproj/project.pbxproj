@@ -15,6 +15,10 @@
 		E4CB21A1262A392500843975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CB219F262A392500843975 /* LaunchScreen.storyboard */; };
 		E4CB21AC262A392500843975 /* Desafio_StefaniniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB21AB262A392500843975 /* Desafio_StefaniniTests.swift */; };
 		E4CB21B7262A392500843975 /* Desafio_StefaniniUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB21B6262A392500843975 /* Desafio_StefaniniUITests.swift */; };
+		E4CB21CA262A443E00843975 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB21C9262A443E00843975 /* ImageViewCell.swift */; };
+		E4CB21D4262B26B100843975 /* GalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB21D3262B26B100843975 /* GalleryResponse.swift */; };
+		E4CB21DD262B2D2900843975 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB21DC262B2D2900843975 /* ColumnFlowLayout.swift */; };
+		E4CB21E5262B310A00843975 /* GallerySearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB21E4262B310A00843975 /* GallerySearchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		E4CB21B2262A392500843975 /* Desafio StefaniniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio StefaniniUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CB21B6262A392500843975 /* Desafio_StefaniniUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_StefaniniUITests.swift; sourceTree = "<group>"; };
 		E4CB21B8262A392500843975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CB21C9262A443E00843975 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		E4CB21D3262B26B100843975 /* GalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryResponse.swift; sourceTree = "<group>"; };
+		E4CB21DC262B2D2900843975 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		E4CB21E4262B310A00843975 /* GallerySearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySearchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,13 @@
 		E4CB2193262A392400843975 /* Desafio Stefanini */ = {
 			isa = PBXGroup;
 			children = (
+				E4CB21EA262B330300843975 /* Supporting Files */,
+				E4CB21E9262B32EB00843975 /* Controller */,
+				E4CB21C7262A441A00843975 /* View */,
+				E4CB21D1262B268200843975 /* Service */,
 				E4CB2194262A392400843975 /* AppDelegate.swift */,
 				E4CB2196262A392400843975 /* SceneDelegate.swift */,
-				E4CB2198262A392400843975 /* ViewController.swift */,
 				E4CB219A262A392400843975 /* Main.storyboard */,
-				E4CB219D262A392500843975 /* Assets.xcassets */,
-				E4CB219F262A392500843975 /* LaunchScreen.storyboard */,
-				E4CB21A2262A392500843975 /* Info.plist */,
 			);
 			path = "Desafio Stefanini";
 			sourceTree = "<group>";
@@ -126,6 +134,66 @@
 				E4CB21B8262A392500843975 /* Info.plist */,
 			);
 			path = "Desafio StefaniniUITests";
+			sourceTree = "<group>";
+		};
+		E4CB21C7262A441A00843975 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4CB21DB262B2D0300843975 /* Layout */,
+				E4CB21C8262A442100843975 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4CB21C8262A442100843975 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E4CB21C9262A443E00843975 /* ImageViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E4CB21D1262B268200843975 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E4CB21D2262B269200843975 /* Model */,
+				E4CB21E4262B310A00843975 /* GallerySearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E4CB21D2262B269200843975 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4CB21D3262B26B100843975 /* GalleryResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4CB21DB262B2D0300843975 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E4CB21DC262B2D2900843975 /* ColumnFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		E4CB21E9262B32EB00843975 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4CB2198262A392400843975 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4CB21EA262B330300843975 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4CB219D262A392500843975 /* Assets.xcassets */,
+				E4CB219F262A392500843975 /* LaunchScreen.storyboard */,
+				E4CB21A2262A392500843975 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CB21CA262A443E00843975 /* ImageViewCell.swift in Sources */,
+				E4CB21DD262B2D2900843975 /* ColumnFlowLayout.swift in Sources */,
 				E4CB2199262A392400843975 /* ViewController.swift in Sources */,
 				E4CB2195262A392400843975 /* AppDelegate.swift in Sources */,
 				E4CB2197262A392400843975 /* SceneDelegate.swift in Sources */,
+				E4CB21D4262B26B100843975 /* GalleryResponse.swift in Sources */,
+				E4CB21E5262B310A00843975 /* GallerySearchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +510,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4F3Z7B359Q;
-				INFOPLIST_FILE = "Desafio Stefanini/Info.plist";
+				INFOPLIST_FILE = "Desafio Stefanini/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4F3Z7B359Q;
-				INFOPLIST_FILE = "Desafio Stefanini/Info.plist";
+				INFOPLIST_FILE = "Desafio Stefanini/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
